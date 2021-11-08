@@ -24,31 +24,6 @@ These lexicons are available under different licenses, so be sure that the licen
 
 The function `get_sentiments()` allows us to get specific sentiment lexicons with the appropriate measures for each one.
 
-```{r eval=FALSE}
-library(tidytext)
-
-get_sentiments("afinn")
-```
-
-```{r echo = FALSE}
-library(tidytext)
-load("data/afinn.rda")
-afinn
-```
-
-```{r}
-get_sentiments("bing")
-```
-
-```{r eval=FALSE}
-get_sentiments("nrc")
-```
-
-```{r echo=FALSE}
-load("data/nrc.rda")
-nrc
-```
-
 
 How were these sentiment lexicons put together and validated? They were constructed via either crowdsourcing (using, for example, Amazon Mechanical Turk) or by the labor of one of the authors, and were validated using some combination of crowdsourcing again, restaurant or movie reviews, or Twitter data. Given this information, we may hesitate to apply these sentiment lexicons to styles of text dramatically different from what they were validated on, such as narrative fiction from 200 years ago. While it is true that using these sentiment lexicons with, for example, Jane Austen's novels may give us less accurate results than with tweets sent by a contemporary writer, we still can measure the sentiment content for words that are shared across the lexicon and the text.
 
